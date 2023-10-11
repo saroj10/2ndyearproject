@@ -257,6 +257,7 @@ if($email != false && $password != false){
                  <th> Waste Category </th>
                  <th>Location</th>
                  <th>Location Description</th>
+                 <th>Complaints</th>
                  <th>Status</th>
                  <th >Action</th>
                  <th>Update status</th>
@@ -287,6 +288,7 @@ if($email != false && $password != false){
                <td>   ".$result['wastetype']." </td>
                <td>   ".$result['location']." </td>
                <td>   ".$result['locationdescription']."  </td>
+               <td>   ".$result['complaints']." </td>
                <td>   ".$result['status']."  </td>
                <td><a href = 'admindelete.php?i=$result[Id] 'class='btn btn-danger'>Delete</a></td>
               <td> <a href = 'status.php?i=$result[Id]&s=$result[status] 'class='btn btn-success'>Status</a></td>

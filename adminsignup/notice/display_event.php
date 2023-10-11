@@ -1,6 +1,6 @@
 <?php                
 require 'database_connection.php'; 
-$display_query = "select event_id,event_name,event_start_date,event_end_date from calendar_event_master";             
+$display_query = "select event_id,event_name,event_start_date,event_end_date from notice";             
 $results = mysqli_query($con,$display_query);   
 $count = mysqli_num_rows($results);  
 if($count>0) 
@@ -14,7 +14,6 @@ if($count>0)
 	$data_arr[$i]['start'] = date("Y-m-d", strtotime($data_row['event_start_date']));
 	$data_arr[$i]['end'] = date("Y-m-d", strtotime($data_row['event_end_date']));
 	$data_arr[$i]['color'] = '#'.substr(uniqid(),-6); // 'green'; pass colour name
-	$data_arr[$i]['url'] = 'https://www.shinerweb.com';
 	$i++;
 	}
 	

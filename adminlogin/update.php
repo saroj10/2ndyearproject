@@ -9,6 +9,7 @@ $em = $_GET['em'];
 $wt = $_GET['wt'];
 $lo = $_GET['lo'];
 $lod = $_GET['lod'];
+$c=$_GET['c'];
 //$f = $_GET['f'];
 $d = $_GET['d'];
 
@@ -27,6 +28,7 @@ if(isset($_POST['update'])){
     $email =$_POST['email'];
     $location = $_POST['location'];    
     $locationdescription = $_POST['locationdescription'];
+	$complaints=$_POST['complaints'];
     $date =$_POST['date'];
 	// @unlink('upload/'.$f[0]['file']) ;
 
@@ -51,7 +53,7 @@ if(isset($_POST['update'])){
 	  // move_uploaded_file($image = $_FILES['file']['tmp_name'],$target_dir.$file);
   
 	//}
-    $query = "update garbageinfo set name='$name',mobile='$mobile',email='$email',wastetype='$chk',location='$location',locationdescription='$locationdescription',date='$date' WHERE Id='$id'" ;
+    $query = "update garbageinfo set name='$name',mobile='$mobile',email='$email',wastetype='$chk',location='$location',locationdescription='$locationdescription',complaints='$complaints',date='$date' WHERE Id='$id'" ;
    
     $data = mysqli_query($db,$query);
     
@@ -131,7 +133,7 @@ if(isset($_POST['update'])){
 					<label class="control-label col-sm-2" for="lname">Location:</label>
 					<div class="col-sm-10">          
 					   <select class="form-control" id="location" name="location" value="<?php echo "$lo"?>">
-						   <option class="form-control" >Ktm</option>
+						   <option class="form-control" >Kathmandu</option>
 						   <option class="form-control" >Bhaktapur</option>
 						   <option class="form-control" >Lalitpur</option>
 						   <!--<option class="form-control" >sanepa</option>
@@ -143,6 +145,14 @@ if(isset($_POST['update'])){
 				  
 				  <div class="col-sm-10">
 					<input type="comment" class="form-control" rows="5" id="locationdescription" placeholder="Enter Location details..." name="locationdescription" value="<?php echo "$lod"?>" required>
+				  </div>
+				</div>
+				<div class="form-group">
+				  
+				<div class="form-group">
+				<label class="control-label col-sm-2" for="lname">Complaints:</label>  
+				<div class="col-sm-10">
+					<input type="comment" class="form-control" rows="5" id="complaints" placeholder="Enter your complaints..." name="complaints" value="<?php echo "$c"?>" required>
 				  </div>
 				</div>
 				<!--<div class="form-group">

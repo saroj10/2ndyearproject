@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
      $mail->Port= '587';
      $mail->isHTML(true);
      $mail->Username='saroj.077bca028@acem.edu.np';
-     $mail->Password='neymarsarpj@10';
+     $mail->Password='neymarsaroj@10';
      $mail->SetFrom('no-reply@howcode.org');     
      $mail->Subject='Hello sir!';
      $mail->Body=$html;     
@@ -106,7 +106,7 @@ if(isset($_POST['submit'])){
 </div>
 <div class="email">
    <h2>Email</h2>
-   <a href="mailto:vattasaroj10@gmail.com">vattasaroj10@gmail.com</a>
+   <a href="mailto:gms72043@gmail.com">gms72043@gmail.com</a>
 </div>
 <div class="location">
    <h2>Visit</h2>

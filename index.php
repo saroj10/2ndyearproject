@@ -411,7 +411,7 @@
               Kathmandu, Bagmati Province<br>
               Nepal <br><br>
               <strong>Phone:</strong> +977 9874474832<br>
-              <strong>Email:</strong> <a href="mailto:vattasaroj10@gmail.com">vattasaroj10@gmail.com<br></a>
+              <strong>Email:</strong> <a href="mailto:gms72043@gmail.com">gms72043@gmail.com<br></a>
             </p>
           </div>
 

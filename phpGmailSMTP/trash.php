@@ -44,6 +44,7 @@ if(isset($_POST['submit'])){
 	$status = mysqli_real_escape_string($con,$_POST['status']);
     $location = mysqli_real_escape_string($con,$_POST['location']);    
     $locationdescription = mysqli_real_escape_string($con,$_POST['locationdescription']);
+	$complaints= mysqli_real_escape_string($con,$_POST['complaints']);
 	$date = $_POST['date'];
 	
 	//$file = $_FILES['file']['name'];
@@ -68,7 +69,7 @@ if(isset($_POST['submit'])){
   
 	//}
 
-		$sql = "insert into garbageinfo(name,mobile,email,wastetype,location,locationdescription,date,status)values('$name','$mobile','$email','$chk','$location','$locationdescription','$date','$status')";
+		$sql = "insert into garbageinfo(name,mobile,email,wastetype,location,locationdescription,complaints,date,status)values('$name','$mobile','$email','$chk','$location','$locationdescription','$complaints','$date','$status')";
 		
     	if(mysqli_query($con,$sql)){
 			$msg = '<div class = "alert alert-success"><span class="fa fa-check"> "Compain Registered Successfully!"</span><a href="http://localhost:8080/EmailVerification/adminlogin/welcome.php"> view Complain </a></div>';
@@ -89,7 +90,7 @@ if(isset($_POST['submit'])){
      $mail->Host='smtp.gmail.com';
      $mail->Port= '587';
      $mail->isHTML(true);
-     $mail->Username='vattasaroj10@gmail.com';
+     $mail->Username='gms72043@gmail.com';
      $mail->Password='your email passsword';
      $mail->SetFrom('no-reply@howcode.org');     
      $mail->Subject='Hello sir!';
@@ -179,6 +180,13 @@ if(isset($_POST['submit'])){
 				  
 				  <div class="col-sm-10">
 					<textarea class="form-control" rows="5" id="locationdescription" placeholder="Enter Location details..." name="locationdescription" required></textarea>
+				  </div>
+				</div>
+				<div class="form-group">
+				<label class="control-label col-sm-2" for="lname">Complaints:</label>
+				  
+				  <div class="col-sm-10">
+					<textarea class="form-control" rows="5" id="complaints" placeholder="Enter your complaint..." name="complaints" required></textarea>
 				  </div>
 				</div>
 			<!--	<div class="form-group">

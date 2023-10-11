@@ -121,6 +121,7 @@ if($email != false && $password != false){
                  <th>Type of Waste</th>
                  <th>Location</th>
                  <th>Location Description</th>
+                 <th>Complaints</th>
                  <!--<th>Images</th>-->
                  <th>Status</th>
                  <th colspan="2" align="center">Operations</th>
@@ -151,12 +152,13 @@ $sessionEmail = $_SESSION['email'];
                <td>   ".$result['email']." </td>
                <td>   ".$result['wastetype']." </td>
                <td>   ".$result['location']." </td>
-               <td>   ".$result['locationdescription']."  </td>   
+               <td>   ".$result['locationdescription']."  </td> 
+               <td>   ".$result['complaints']." </td>  
                <td>   ".$result['status']." </td>            
                <td><a href = 'delete.php?i=$result[Id] 'class='btn btn-danger'data-toggle='modal' data-target='#exampleModalCenter' onclick='modalLauch(".$result['Id'].")'>Delete</a></td>
                
                
-              <td> <a href = 'update.php?i=$result[Id]&n=$result[name]&mbl=$result[mobile]&em=$result[email]&wt=$result[wastetype]&lo= $result[location]&lod=$result[locationdescription]&f=$result[file]&d=$result[date]' class='btn btn-success'>Edit</a></td>
+              <td> <a href = 'update.php?i=$result[Id]&n=$result[name]&mbl=$result[mobile]&em=$result[email]&wt=$result[wastetype]&lo= $result[location]&lod=$result[locationdescription]&c=$result[complaints]&d=$result[date]' class='btn btn-success'>Edit</a></td>
 
            </tr> ";
       
